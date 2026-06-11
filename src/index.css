@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap');
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+#root { min-height: 100vh; display: flex; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+textarea, input, select { font-family: 'DM Sans', system-ui, sans-serif; }
