@@ -81,6 +81,34 @@ export const SPECIFIC_QUESTIONS: Record<ProfileType, Question[]> = {
     { id: 'd8', text: "Freins à l'adoption des outils digitaux par les équipes métier ?", type: 'specific' },
     { id: 'd9', text: "Contraintes sécurité/conformité pour intégrer un SaaS tiers ?", type: 'specific' },
   ],
+  suivi_contrat: [
+    // Rôle et périmètre
+    { id: 'sc1', text: 'Sur quels types de contrats travailles-tu principalement ? (collectifs entreprises, individuels, ou les deux ?)', type: 'specific' },
+    { id: 'sc2', text: 'Quels types d\'avenants traites-tu le plus souvent ? (ajout/suppression bénéficiaires, changement garanties, révision cotisations, résiliation…)', type: 'specific' },
+    { id: 'sc3', text: 'Combien de contrats actifs as-tu en portefeuille à un instant T ? Et combien d\'avenants traites-tu par semaine/mois ?', type: 'specific' },
+    // Outils et processus
+    { id: 'sc4', text: 'Quel logiciel utilises-tu pour gérer le cycle de vie des contrats ? (outil interne AXA, progiciel tiers, Excel ?)', type: 'specific' },
+    { id: 'sc5', text: 'Le suivi des échéances (renouvellement, résiliation, ajustements) est-il automatisé ou manuel ?', type: 'specific' },
+    { id: 'sc6', text: 'Y a-t-il des contrôles de cohérence à faire entre la police éditée et les avenants successifs ? Comment tu les fais ?', type: 'specific' },
+    // Points de friction
+    { id: 'sc7', text: 'Quelles sont les erreurs les plus fréquentes dans les avenants ? (données manquantes, délais, erreurs de saisie…)', type: 'specific' },
+    { id: 'sc8', text: 'Les demandes d\'avenant viennent de qui ? (courtiers, souscripteurs, clients directement ?)', type: 'specific' },
+    { id: 'sc9', text: 'Quel est le délai moyen entre la demande d\'avenant et l\'édition finale transmise au client ? Pour un cas simple ? Pour un cas complexe ?', type: 'specific' },
+    // Interactions métier
+    { id: 'sc10', text: 'Avec quels autres services interagis-tu le plus ? (souscription, sinistres, comptabilité, IT…)', type: 'specific' },
+    { id: 'sc11', text: 'Y a-t-il des situations où tu dois escalader ou consulter le souscripteur pour valider un avenant ?', type: 'specific' },
+    // Métriques de productivité
+    { id: 'sc12', text: 'Y a-t-il un quota ou objectif de traitement journalier fixé par le management ?', type: 'specific' },
+    { id: 'sc13', text: 'Quelle proportion du travail est manuelle vs automatisée dans le traitement d\'un avenant ?', type: 'specific' },
+    { id: 'sc14', text: 'Quel est le taux d\'erreur sur les avenants produits ? Comment les erreurs sont-elles détectées — contrôle interne, client ou courtier ?', type: 'specific' },
+    { id: 'sc15', text: 'Y a-t-il un backlog d\'avenants en attente ? Quelle est la taille moyenne du backlog ?', type: 'specific' },
+    { id: 'sc16', text: 'Y a-t-il des pics saisonniers (fin d\'année, renouvellements) qui font exploser le volume ?', type: 'specific' },
+    { id: 'sc17', text: 'Combien de temps passes-tu sur des tâches de relance (courtiers, clients, souscripteurs) ?', type: 'specific' },
+    { id: 'sc18', text: 'Combien d\'applications ouvres-tu en parallèle pour traiter un seul avenant ?', type: 'specific' },
+    // Data / valeur
+    { id: 'sc19', text: 'Les avenants génèrent-ils des données exploitables ? (historique des modifications, motifs de résiliation, pics saisonniers…)', type: 'specific' },
+    { id: 'sc20', text: 'Y a-t-il des indicateurs de performance suivis pour ton poste ? (délai traitement, taux d\'erreur, volume…)', type: 'specific' },
+  ],
   direction: [
     { id: 'di1', text: 'Évolution du marché santé sénégalais sur 3-5 ans ?', type: 'specific' },
     { id: 'di2', text: 'Segments sous-assurés = opportunités ?', type: 'specific' },
@@ -105,10 +133,11 @@ export const PROFILE_META: Record<ProfileType, { label: string; emoji: string; c
   commercial:   { label: 'Commercial / Sales',          emoji: '💼', color: '#10b981', accent: '#047857' },
   dsi:          { label: 'DSI / IT',                    emoji: '🖥️', color: '#06b6d4', accent: '#0e7490' },
   direction:    { label: 'Direction / Décideurs',       emoji: '👔', color: '#f97316', accent: '#c2410c' },
+  suivi_contrat: { label: 'Gestionnaire Suivi de Contrat', emoji: '📝', color: '#14b8a6', accent: '#0f766e' },
 };
 
 export const ALL_PROFILES: ProfileType[] = [
-  'gestionnaire', 'actuaire', 'souscripteur', 'fraude', 'commercial', 'dsi', 'direction',
+  'gestionnaire', 'actuaire', 'souscripteur', 'fraude', 'commercial', 'dsi', 'direction', 'suivi_contrat',
 ];
 
 export function getQuestionsForProfile(profile: ProfileType): Question[] {

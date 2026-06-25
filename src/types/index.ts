@@ -7,7 +7,8 @@ export type ProfileType =
   | 'fraude'
   | 'commercial'
   | 'dsi'
-  | 'direction';
+  | 'direction'
+  | 'suivi_contrat';
 
 export interface QuestionAnswer {
   questionId: string;
